@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" href="css/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Music Player</h1>
+        <div class="musicbox">
+            <div class="tracks"></div>
+            <i class="fa-solid fa-bars" id="home"></i>
+            <div id="banner">
+                <img src="css/background.png" id="imgbanner">
+            </div>
+          <div id="para">
+            <p id="songname">Song-Name</p>
+            <h3 id="track"></h3>
+            <p id="artist-name">Artist</p>
+            <p id="artist"></p>
+           
+          </div>
+          <div class="slider">
+            <input type="range" id="range">
+            <span class="current-time"></span>
+            <span class="song-duration"></span>
+           </div>
+           <div class="icon">
+            <i class="fa-solid fa-backward" id="backward"></i>
+            <i class="fa-solid fa-circle-play" id="ctrl"></i>
+            <i class="fa-solid fa-forward" id="forward"></i>
+            <div id="volume">
+                <input type="range" id="volume-range" class="vol-active" min="0" max="100" value="10">
+                <span class="volume-time">0</span>
+                <span class="volume-total">100</span>
+                <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                
+            </div>
+           </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
