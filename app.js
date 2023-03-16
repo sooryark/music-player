@@ -14,7 +14,7 @@ const homeEl = document.getElementById("home");
 const songTracks = document.querySelector(".tracks");
 const volumeTime = document.querySelector(".volume-time");
 const volumeTotal = document.querySelector(".volume-total");
-
+const trackcontainer = document.getElementById("trackcontainer")
 
 let timer;
 let autoplay=1;
@@ -24,18 +24,7 @@ let index = 0;
 
 let track = document.createElement("audio");
 
-homeEl.addEventListener("click",()=>{
-    songTracks.classList.toggle("homepage");
-    if(homeEl.classList.contains("fa-bars")){
-        homeEl.classList.remove("fa-bars");
-        homeEl.classList.add("fa-circle-xmark")
-        playList();
-    }else{
-        homeEl.classList.add("fa-bars");
-        homeEl.classList.remove("fa-circle-xmark"); 
-    }
-   
-});
+
 
 
 track.onloadedmetadata = function(){
@@ -43,18 +32,7 @@ track.onloadedmetadata = function(){
     sliderEl.value = track.currentTime;
 }
 
-function playList(){
-   const playListEl = document.createElement("div");
-   const artistName = document.createElement("div")
-   playListEl.setAttribute("class","list");
-   artistName.setAttribute("class","names");
-   playListEl.append(artistName);
-   for(index in allMusic){
-     artistName.append(allMusic[index].artist,allMusic[index].name);
-     playListEl.append(songsName);
-    songTracks.append(playListEl);
-   }   
-}
+
 
    
 volumeIcon.addEventListener("click",()=>{
@@ -65,7 +43,7 @@ volumeIcon.addEventListener("click",()=>{
     volumeEl.classList.add("vol-active");
     volumeTime.classList.toggle("volume-active");
    volumeTotal.classList.toggle("volume-active");
-},10000);
+},100000);
 });
 
 volumeEl.addEventListener("change",()=>{
@@ -114,6 +92,8 @@ let allMusic = [
         src:"css/running.mp3"
     }
 ];
+
+
 
 
 function loadSongs(index){

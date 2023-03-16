@@ -33,30 +33,6 @@ body{
     box-shadow: 5px 5px 5px black;
     position: relative;
 }
-#home{
-    position: absolute;
-    top:3px;
-    right:10px;
-}
-.homepage{
-   width:300px;
-   height:470px;
-   z-index: 2;
-   background-color: black;
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   transition: 0.5s ease-in-out;
-   border-radius: 10px;
-   color: white;
-}
-.names{
-    width:300px;
-    height:30px;
-    margin: 1px 0px;
-    text-align: center;
-    padding: 50px;
-}
 .slider{
     position: relative;
     width: 100%;
@@ -154,10 +130,11 @@ body{
 
 #volume-icon{
     position: absolute;
-    top:8px;
-    left:10px;
+    bottom:27px;
+    right:10px;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 10px;
+    font-weight: bold;
     z-index: 1;
 }
 #volume-icon:hover{
@@ -168,28 +145,28 @@ body{
     -webkit-appearance: none;
     appearance: none;
     background-color: #4E9F3D;
-    width:150px;
+    width:100px;
     height:5px;
     border-radius: 5px;
     color: black;
     cursor: pointer;
     position: absolute;
-    top: 100px;
-    left: 70px;
-    top:40px;
+    bottom: 150px;
+    right: -20px;
+    transform: rotate(270deg);
 }
 .volume-time{
     position: absolute;
-    top:45px;
-    left: 70px;
+    bottom:80px;
+    right: 25px;
     color: #4E9F3D;
     font-size: 12px;
     display: none;
 }
 .volume-total{
     position: absolute;
-    top:45px;
-    right: 80px;
+    bottom:210px;
+    right: 20px;
     color: #4E9F3D;
     font-size: 12px;
     display: none;
